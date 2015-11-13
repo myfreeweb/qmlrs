@@ -29,6 +29,7 @@ fn main() {
     }
     println!("cargo:rustc-link-lib=static=qmlrswrapper");
     println!("cargo:rustc-link-lib=dylib=stdc++");
+    println!("cargo:rustc-link-search=native=/usr/local/lib");
     println!("cargo:rustc-link-search=native={}",build.display());
     pkg_config::find_library("Qt5Core Qt5Gui Qt5Qml Qt5Quick").unwrap();
 }
